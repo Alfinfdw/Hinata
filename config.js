@@ -3,16 +3,15 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 import moment from 'moment-timezone'
-import fetch from 'node-fetch'
 
 /*Oᴡɴᴇʀ number*/
 global.owner = [
   ['6282195322106'],
   ['6282195322106', '️OWNER - HINATA', true]
 ]
-global.mods = []
-global.prems = []
-global.girlfren = []
+global.mods = ['6282195322106']
+global.prems = ['6282195322106']
+global.girlfren = ['6282195322106']
 
 /*Website*/
 global.APIs = {
@@ -143,7 +142,7 @@ global.adReplyS = {
 						mediaUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI',
 						description: 'WudySoft',
 						previewType: 'PHOTO',
-						thumbnail: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnail: await fs.readFileSync('./thumbnail.jpg'),
 						sourceUrl: 'https://github.com/wudysoft',
 				}
 			}
@@ -164,7 +163,7 @@ global.adReplyS = {
 						sourceType: 'PDF',
 						previewType: 'PDF',
 						sourceUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI',
-						thumbnail: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnail: await fs.readFileSync('./thumbnail.jpg'),
 						thumbnailUrl: 'https://cerdasin.netlify.app/img/thumbnail.jpg',
 						title: '👋 Halo ᴋᴀᴋ :3 '
 				}
@@ -180,7 +179,7 @@ global.adReplyS = {
 						description: "Follow: " + 'https://www.instagram.com/wudysoft',
 						title: '👋 Halo ᴋᴀᴋ :3 ',
 						body: 'WhatsApp Bot',
-						thumbnailUrl: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnailUrl: await fs.readFileSync('./thumbnail.jpg'),
 						sourceUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
 					}
 				}
@@ -195,7 +194,7 @@ global.adReplyS = {
 						description: "Follow: " + 'https://www.instagram.com/wudysoft',
 						title: '👋 Halo ᴋᴀᴋ :3 ',
 						body: 'WhatsApp Bot',
-						thumbnailUrl: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnailUrl: await fs.readFileSync('./thumbnail.jpg'),
 						sourceUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
 					}
 				}
@@ -210,7 +209,7 @@ global.adReplyS = {
 						description: "Follow: " + 'https://www.instagram.com/wudysoft',
 						title: '👋 Halo ᴋᴀᴋ :3 ',
 						body: 'WhatsApp Bot',
-						thumbnailUrl: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnailUrl: await fs.readFileSync('./thumbnail.jpg'),
 						sourceUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
 					}
 				}
@@ -225,7 +224,7 @@ global.adReplyS = {
 						description: "Follow: " + 'https://www.instagram.com/wudysoft',
 						title: '👋 Halo ᴋᴀᴋ :3 ',
 						body: 'WhatsApp Bot',
-						thumbnailUrl: await(await fetch('https://cerdasin.netlify.app/img/thumbnail.jpg')).buffer(),
+						thumbnailUrl: await fs.readFileSync('./thumbnail.jpg'),
 						sourceUrl: 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
 					}
 				}
@@ -272,8 +271,6 @@ global.adReplyS = {
 			}
 		}
 		global.knimg = 'https://cerdasin.netlify.app/img/thumbnail.jpg'
-		global.tumhiho = 'https://cerdasin.netlify.app/img/thumbnail.jpg'
-		
 		
 /*Watermark*/
 global.lopr = '🅟'
