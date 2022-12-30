@@ -50,7 +50,7 @@ if (args[0] == 'custom') {
 }
 
 }
-handler.command = /^mapbox$/i
+handler.command = ['mapbox']
 
 export default handler
 

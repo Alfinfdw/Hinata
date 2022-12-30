@@ -3,6 +3,7 @@ import fetch from 'node-fetch'
 import cheerio from 'cheerio'
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
+if (!text) throw 'Input Username 500px'
 	let res = await fetchData(text)
 	let listSections = []
 	Object.values(res).map((v, index) => {

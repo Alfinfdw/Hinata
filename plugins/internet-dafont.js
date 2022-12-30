@@ -4,6 +4,7 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn, text, usedPrefix, command }) => {
   if (!text) throw 'Harap Masukan Query'
   if (command == 'dafonts') {
+  try {
     let res = await dafontSearch(text)
 	let row = Object.values(res).map((v, index) => ({
 		title: v.judul,
@@ -16,9 +17,11 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
+	} catch (e) { throw eror }
 }
 
 if (command == 'dafontsdown') {
+try {
 let res = await dafontDown(text)
 let row = Object.values(res).map((v, index) => ({
 		title: v.judul,
@@ -31,6 +34,7 @@ let row = Object.values(res).map((v, index) => ({
 		footerText: wm
 	}
 	return await conn.sendListM(m.chat, button, row, m)
+	} catch (e) { throw eror }
 }
 
 }

@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
 let key = 'h6fTn1BYNjYi5VTszhyAFTcM3WWtk2E4hqrXCcutfObE4jVFnJ3LVyewHKIYTli7'
 let Client = new Genius.Client(key)
 
-if (!text) throw 'Masukkan teksnya'
+if (!text) throw 'Exm. .genius a |hello'
 let urut = text.split`|`
 let comm = urut[0]
 let quer = urut[1]
@@ -74,6 +74,8 @@ throw lirik
 }
 	
     }
-handler.command = /^genius$/i
+handler.tags = ['info']
+handler.help = ['genius']
+handler.command = ['genius']
 
 export default handler

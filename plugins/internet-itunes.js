@@ -39,6 +39,6 @@ if (!text) throw 'Masukkan teks, Ex. Radiogead'
     }
 handler.help = ['itunes']
 handler.tags = ['music', 'audio']
-handler.command = /^itunes$/i
+handler.command = ['itunes']
 
 export default handler
