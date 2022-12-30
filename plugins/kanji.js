@@ -28,7 +28,7 @@ let pesan = `*Result :*`
 		pesan += `grade : ${grade}, stroke : ${stroke_count}, JLPT : ${jlpt}\n`
 		pesan += `${cmenuf}`
 	}
-	await conn.sendPayment(m.chat, fsizedoc, 'USD', pesan, m.sender, tumhiho, m)
+	await conn.sendPayment(m.chat, fsizedoc, 'USD', pesan, m.sender, await conn.resize(logo, 300, 150), m)
     }
   if (args[0] == 'words') {
   let res = await fetch('https://kanjiapi.dev/v1/' + args[0] + '/' + encodeURIComponent(tes))
@@ -57,7 +57,7 @@ let pesan = `*Result :*`
 		pesan += `Name Kanji : ${name_kanji}\n`
 		pesan += `${cmenuf}`
 	}
-	await conn.sendPayment(m.chat, fsizedoc, 'USD', pesan, m.sender, tumhiho, m)
+	await conn.sendPayment(m.chat, fsizedoc, 'USD', pesan, m.sender, await conn.resize(logo, 300, 150), m)
     }
 }
 handler.help = ['kanji'].map(v => v + ' <kanji>')

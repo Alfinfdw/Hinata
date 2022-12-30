@@ -119,7 +119,7 @@ let kuas = await fetch(`https://latam-api.vercel.app/api/${args[0]}?apikey=nekos
 								mediaUrl: syt,
 								showAdAttribution: true,
 								sourceUrl: syt,
-								thumbnailUrl: tumhiho,
+								thumbnailUrl: await conn.resize(logo, 300, 150),
 								renderLargerThumbnail: true,
 								title: 'Nihh Kak, ' + name,
 							}

